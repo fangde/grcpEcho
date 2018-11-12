@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rrpcEcho.proto\"r\n\tEchoImage\x12\x0e\n\x06height\x18\x01 \x01(\r\x12\r\n\x05width\x18\x02 \x01(\r\x12\x0e\n\x06\x63hanel\x18\x03 \x01(\r\x12\r\n\x05image\x18\x04 \x01(\x0c\x12\n\n\x02sx\x18\x05 \x01(\x02\x12\n\n\x02sy\x18\x06 \x01(\x02\x12\x0f\n\x07ijk2ras\x18\x07 \x01(\x02\"\x10\n\x0e\x45\x63hoImageReply2E\n\x10\x45\x63hoImageService\x12\x31\n\x10\x45\x63hoImageMethods\x12\n.EchoImage\x1a\x0f.EchoImageReply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\rrpcEcho.proto\"r\n\tEchoImage\x12\x0e\n\x06height\x18\x01 \x01(\r\x12\r\n\x05width\x18\x02 \x01(\r\x12\x0e\n\x06\x63hanel\x18\x03 \x01(\r\x12\r\n\x05image\x18\x04 \x01(\x0c\x12\n\n\x02sx\x18\x05 \x01(\x02\x12\n\n\x02sy\x18\x06 \x01(\x02\x12\x0f\n\x07ijk2ras\x18\x07 \x01(\x02\"\x07\n\x05\x45mpty28\n\x10\x45\x63hoImageService\x12$\n\x0cProcessImage\x12\n.EchoImage\x1a\x06.Empty\"\x00\x62\x06proto3')
 )
 
 
@@ -98,9 +98,9 @@ _ECHOIMAGE = _descriptor.Descriptor(
 )
 
 
-_ECHOIMAGEREPLY = _descriptor.Descriptor(
-  name='EchoImageReply',
-  full_name='EchoImageReply',
+_EMPTY = _descriptor.Descriptor(
+  name='Empty',
+  full_name='Empty',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -118,11 +118,11 @@ _ECHOIMAGEREPLY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=133,
-  serialized_end=149,
+  serialized_end=140,
 )
 
 DESCRIPTOR.message_types_by_name['EchoImage'] = _ECHOIMAGE
-DESCRIPTOR.message_types_by_name['EchoImageReply'] = _ECHOIMAGEREPLY
+DESCRIPTOR.message_types_by_name['Empty'] = _EMPTY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 EchoImage = _reflection.GeneratedProtocolMessageType('EchoImage', (_message.Message,), dict(
@@ -132,12 +132,12 @@ EchoImage = _reflection.GeneratedProtocolMessageType('EchoImage', (_message.Mess
   ))
 _sym_db.RegisterMessage(EchoImage)
 
-EchoImageReply = _reflection.GeneratedProtocolMessageType('EchoImageReply', (_message.Message,), dict(
-  DESCRIPTOR = _ECHOIMAGEREPLY,
+Empty = _reflection.GeneratedProtocolMessageType('Empty', (_message.Message,), dict(
+  DESCRIPTOR = _EMPTY,
   __module__ = 'rpcEcho_pb2'
-  # @@protoc_insertion_point(class_scope:EchoImageReply)
+  # @@protoc_insertion_point(class_scope:Empty)
   ))
-_sym_db.RegisterMessage(EchoImageReply)
+_sym_db.RegisterMessage(Empty)
 
 
 
@@ -147,16 +147,16 @@ _ECHOIMAGESERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=151,
-  serialized_end=220,
+  serialized_start=142,
+  serialized_end=198,
   methods=[
   _descriptor.MethodDescriptor(
-    name='EchoImageMethods',
-    full_name='EchoImageService.EchoImageMethods',
+    name='ProcessImage',
+    full_name='EchoImageService.ProcessImage',
     index=0,
     containing_service=None,
     input_type=_ECHOIMAGE,
-    output_type=_ECHOIMAGEREPLY,
+    output_type=_EMPTY,
     serialized_options=None,
   ),
 ])

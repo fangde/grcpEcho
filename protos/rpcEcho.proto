@@ -2,8 +2,8 @@
 syntax = "proto3";
 
 service EchoImageService {
-    // Sends a greeting
-    rpc EchoImageMethods (EchoImage) returns (EchoImageReply) {}
+
+    rpc ProcessImage(EchoImage) returns (Empty) {}
   }
 
 message EchoImage {
@@ -16,7 +16,6 @@ message EchoImage {
      float ijk2ras=7;
 }
 
-message EchoImageReply
-{
+message Empty{
 
 }

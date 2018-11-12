@@ -14,10 +14,10 @@ class EchoImageServiceStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.EchoImageMethods = channel.unary_unary(
-        '/EchoImageService/EchoImageMethods',
+    self.ProcessImage = channel.unary_unary(
+        '/EchoImageService/ProcessImage',
         request_serializer=rpcEcho__pb2.EchoImage.SerializeToString,
-        response_deserializer=rpcEcho__pb2.EchoImageReply.FromString,
+        response_deserializer=rpcEcho__pb2.Empty.FromString,
         )
 
 
@@ -25,9 +25,9 @@ class EchoImageServiceServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def EchoImageMethods(self, request, context):
-    """Sends a greeting
-    """
+  def ProcessImage(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -35,10 +35,10 @@ class EchoImageServiceServicer(object):
 
 def add_EchoImageServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'EchoImageMethods': grpc.unary_unary_rpc_method_handler(
-          servicer.EchoImageMethods,
+      'ProcessImage': grpc.unary_unary_rpc_method_handler(
+          servicer.ProcessImage,
           request_deserializer=rpcEcho__pb2.EchoImage.FromString,
-          response_serializer=rpcEcho__pb2.EchoImageReply.SerializeToString,
+          response_serializer=rpcEcho__pb2.Empty.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
