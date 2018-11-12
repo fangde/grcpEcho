@@ -1,0 +1,22 @@
+
+syntax = "proto3";
+
+service EchoImageService {
+    // Sends a greeting
+    rpc EchoImageMethods (EchoImage) returns (EchoImageReply) {}
+  }
+
+message EchoImage {
+     uint32 height=1;
+     uint32 width =2;
+     uint32 chanel =3;
+     bytes image=4;
+     float sx=5;
+     float sy=6;
+     float ijk2ras=7;
+}
+
+message EchoImageReply
+{
+
+}
